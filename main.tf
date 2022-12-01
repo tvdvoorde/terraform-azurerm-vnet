@@ -8,6 +8,7 @@ terraform {
 variable name {}
 variable location {}
 variable resource_group_name {}
+variable githubsha {}
 
 resource "azurerm_virtual_network" "example" {
   name                = var.name
@@ -22,5 +23,7 @@ resource "azurerm_virtual_network" "example" {
 
   tags = {
     environment = "production"
+    githubsha   = var.githubsha
+    modulepath  = path.module
   }
 }
