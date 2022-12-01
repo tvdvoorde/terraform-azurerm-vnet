@@ -5,6 +5,10 @@ terraform {
   }
 }
 
+variable name {}
+variable location {}
+variable resource_group_name {}
+
 resource "azurerm_virtual_network" "example" {
   name                = var.name
   location            = var.location
