@@ -25,5 +25,6 @@ resource "azurerm_virtual_network" "example" {
     environment = "production"
     githubsha   = var.githubsha
     modulepath  = path.module
+    workspace   = terraform.workspace
   }
 }
