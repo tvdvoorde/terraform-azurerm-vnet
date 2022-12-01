@@ -9,6 +9,8 @@ variable name {}
 variable location {}
 variable resource_group_name {}
 variable githubsha {}
+variable githubref {}
+variable githubrepositoryurl {}
 
 resource "azurerm_virtual_network" "example" {
   name                = var.name
