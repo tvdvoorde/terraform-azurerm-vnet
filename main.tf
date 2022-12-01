@@ -22,9 +22,11 @@ resource "azurerm_virtual_network" "example" {
   }
 
   tags = {
-    environment = "production"
-    githubsha   = var.githubsha
-    modulepath  = path.module
-    workspace   = terraform.workspace
+    environment         = "production"
+    githubsha           = var.githubsha
+    githubref           = var.githubref
+    githubrepositoryurl = var.githubrepositoryurl
+    modulepath          = path.module
+    workspace           = terraform.workspace
   }
 }
